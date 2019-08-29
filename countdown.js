@@ -1,10 +1,15 @@
+input.onButtonPressed(Button.AB, function () {
+    counting = false
+    count = 0
+    basic.showNumber(count)
+})
 input.onButtonPressed(Button.B, function () {
     counting = true
     while (count > 0) {
+        basic.pause(1000)
         basic.clearScreen()
         count += -1
         basic.showNumber(count)
-        basic.pause(1000)
     }
     counting = false
 })
